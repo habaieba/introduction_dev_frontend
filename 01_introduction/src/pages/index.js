@@ -1,12 +1,37 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import MyButton from '@/components/MyButton'
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import MyButton from "@/components/MyButton";
+import MyProfile from "@/components/Profile";
+import { useState } from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
+
+const user = {
+  username: "LeBron James",
+  avatarUrl:
+    "https://ca-times.brightspotcdn.com/dims4/default/0f13f1e/2147483647/strip/true/crop/4937x3292+0+0/resize/1200x800!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F4e%2F4e%2Fba20004c41a5bc970aad01b5739b%2Fhttps-delivery.gettyimages.com%2Fdownloads%2F1199826353.jpg",
+  games: [
+    {
+      id: 1,
+      opponent: "Memphis",
+      scores: ["128-112", "93-103", "111-101", "117-111", "99-116", "125-85"],
+    },
+    {
+      id: 2,
+      opponent: "Warriors",
+      scores: [],
+    },
+  ],
+};
 
 export default function Home() {
+  const [isConnected, setIsConnected] = useState(false);
+
+  function handleClick() {
+    setIsConnected(!isConnected);
+  }
+
   return (
     <>
       <Head>
@@ -15,9 +40,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${inter.className}`}>
-        <MyButton />
+      <main className={`${styles.main} ${inter.className}`}>
+        <h1 className={styles.title}>Welcome to my app</h1>
+        {isConnected ? (
+          <MyProfile
+            username={user.username}
+            avatarUrl={user.avatarUrl}
+            games={user.games}
+          />
+        ) : (
+          <p>Utilisateur non connecté</p>
+        )}
+        <MyButton isConnected={isConnected} handleClick={handleClick} />
       </main>
     </>
-  )
+  );
 }
