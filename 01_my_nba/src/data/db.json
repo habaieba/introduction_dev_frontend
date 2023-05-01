@@ -1,0 +1,372 @@
+{
+  "players": [
+    {
+      "name": "Paul George",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4251.png&w=350",
+      "playerId": 202331,
+      "teamId": 1610612746
+    },
+    {
+      "name": "LeBron James",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png&w=350",
+      "playerId": 2544,
+      "teamId": 1610612747
+    },
+    {
+      "name": "Bradley Beal",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6580.png&w=350",
+      "playerId": 203078,
+      "teamId": 1610612764
+    },
+    {
+      "name": "Kyle Kuzma",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3134907.png&w=350",
+      "playerId": 1628398,
+      "teamId": 1610612747
+    },
+    {
+      "name": "Thanasis Antetokuompo",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3102533.png&w=350",
+      "playerId": 203648,
+      "teamId": 1610612749
+    },
+    {
+      "name": "Giannis Antetokuompo",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png&w=350",
+      "playerId": 203507,
+      "teamId": 1610612749
+    },
+    {
+      "name": "CJ McCollum",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2490149.png&w=350",
+      "playerId": 203468,
+      "teamId": 1610612757
+    },
+    {
+      "name": "Kawhi Leonard",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6450.png&w=350",
+      "playerId": 202695,
+      "teamId": 1610612746
+    },
+    {
+      "name": "Russell Westbrook",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3468.png&w=350",
+      "playerId": 201566,
+      "teamId": 1610612764
+    },
+    {
+      "name": "Kentavious Caldwell-Pope",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2581018.png&w=350",
+      "playerId": 203484,
+      "teamId": 1610612747
+    },
+    {
+      "name": "Jimmy Butler",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6430.png&w=350",
+      "playerId": 202710,
+      "teamId": 1610612748
+    },
+    {
+      "name": "Myles Turner",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3133628.png&w=350",
+      "playerId": 1626167,
+      "teamId": 1610612754
+    },
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "image": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278073.png&w=350",
+      "playerId": 1628983,
+      "teamId": 1610612760
+    }
+  ],
+  "teams": [
+    {
+      "teamId": 1610612737,
+      "abbreviation": "ATL",
+      "teamName": "Atlanta Hawks",
+      "simpleName": "Hawks",
+      "location": "Atlanta",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612738,
+      "abbreviation": "BOS",
+      "teamName": "Boston Celtics",
+      "simpleName": "Celtics",
+      "location": "Boston",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612751,
+      "abbreviation": "BKN",
+      "teamName": "Brooklyn Nets",
+      "simpleName": "Nets",
+      "location": "Brooklyn",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612766,
+      "abbreviation": "CHA",
+      "teamName": "Charlotte Hornets",
+      "simpleName": "Hornets",
+      "location": "Charlotte",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612741,
+      "abbreviation": "CHI",
+      "teamName": "Chicago Bulls",
+      "simpleName": "Bulls",
+      "location": "Chicago",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612739,
+      "abbreviation": "CLE",
+      "teamName": "Cleveland Cavaliers",
+      "simpleName": "Cavaliers",
+      "location": "Cleveland",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612742,
+      "abbreviation": "DAL",
+      "teamName": "Dallas Mavericks",
+      "simpleName": "Mavericks",
+      "location": "Dallas",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612743,
+      "abbreviation": "DEN",
+      "teamName": "Denver Nuggets",
+      "simpleName": "Nuggets",
+      "location": "Denver",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612765,
+      "abbreviation": "DET",
+      "teamName": "Detroit Pistons",
+      "simpleName": "Pistons",
+      "location": "Detroit",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612744,
+      "abbreviation": "GSW",
+      "teamName": "Golden State Warriors",
+      "simpleName": "Warriors",
+      "location": "Golden State",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612745,
+      "abbreviation": "HOU",
+      "teamName": "Houston Rockets",
+      "simpleName": "Rockets",
+      "location": "Houston",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612754,
+      "abbreviation": "IND",
+      "teamName": "Indiana Pacers",
+      "simpleName": "Pacers",
+      "location": "Indiana",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612746,
+      "abbreviation": "LAC",
+      "teamName": "Los Angeles Clippers",
+      "simpleName": "Clippers",
+      "location": "Los Angeles",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612747,
+      "abbreviation": "LAL",
+      "teamName": "Los Angeles Lakers",
+      "simpleName": "Lakers",
+      "location": "Los Angeles",
+      "lastGames": [
+        {
+          "id": 1,
+          "opponentTeamId": 1610612763,
+          "scoreboard": "128-112"
+        },
+        {
+          "id": 2,
+          "opponentTeamId": 1610612763,
+          "scoreboard": "93-103"
+        },
+        {
+          "id": 3,
+          "opponentTeamId": 1610612763,
+          "scoreboard": "111-101"
+        },
+        {
+          "id": 4,
+          "opponentTeamId": 1610612763,
+          "scoreboard": "117-111"
+        },
+        {
+          "id": 5,
+          "opponentTeamId": 1610612763,
+          "scoreboard": "99-116"
+        },
+        {
+          "id": 6,
+          "opponentTeamId": 1610612763,
+          "scoreboard": "125-85"
+        },
+        {
+          "id": 6,
+          "opponentTeamId": 1610612763,
+          "scoreboard": "125-85"
+        },
+        {
+          "id": 7,
+          "opponentTeamId": 1610612744,
+          "scoreboard": ""
+        }
+      ]
+    },
+    {
+      "teamId": 1610612763,
+      "abbreviation": "MEM",
+      "teamName": "Memphis Grizzlies",
+      "simpleName": "Grizzlies",
+      "location": "Memphis",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612748,
+      "abbreviation": "MIA",
+      "teamName": "Miami Heat",
+      "simpleName": "Heat",
+      "location": "Miami",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612749,
+      "abbreviation": "MIL",
+      "teamName": "Milwaukee Bucks",
+      "simpleName": "Bucks",
+      "location": "Milwaukee",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612750,
+      "abbreviation": "MIN",
+      "teamName": "Minnesota Timberwolves",
+      "simpleName": "Timberwolves",
+      "location": "Minnesota",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612740,
+      "abbreviation": "NOP",
+      "teamName": "New Orleans Pelicans",
+      "simpleName": "Pelicans",
+      "location": "New Orleans",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612752,
+      "abbreviation": "NYK",
+      "teamName": "New York Knicks",
+      "simpleName": "Knicks",
+      "location": "New York",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612760,
+      "abbreviation": "OKC",
+      "teamName": "Oklahoma City Thunder",
+      "simpleName": "Thunder",
+      "location": "Oklahoma City",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612753,
+      "abbreviation": "ORL",
+      "teamName": "Orlando Magic",
+      "simpleName": "Magic",
+      "location": "Orlando",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612755,
+      "abbreviation": "PHI",
+      "teamName": "Philadelphia 76ers",
+      "simpleName": "76ers",
+      "location": "Philadelphia",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612756,
+      "abbreviation": "PHX",
+      "teamName": "Phoenix Suns",
+      "simpleName": "Suns",
+      "location": "Phoenix",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612757,
+      "abbreviation": "POR",
+      "teamName": "Portland Trail Blazers",
+      "simpleName": "Trail Blazers",
+      "location": "Portland",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612758,
+      "abbreviation": "SAC",
+      "teamName": "Sacramento Kings",
+      "simpleName": "Kings",
+      "location": "Sacramento",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612759,
+      "abbreviation": "SAS",
+      "teamName": "San Antonio Spurs",
+      "simpleName": "Spurs",
+      "location": "San Antonio",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612761,
+      "abbreviation": "TOR",
+      "teamName": "Toronto Raptors",
+      "simpleName": "Raptors",
+      "location": "Toronto",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612762,
+      "abbreviation": "UTA",
+      "teamName": "Utah Jazz",
+      "simpleName": "Jazz",
+      "location": "Utah",
+      "lastGames": []
+    },
+    {
+      "teamId": 1610612764,
+      "abbreviation": "WAS",
+      "teamName": "Washington Wizards",
+      "simpleName": "Wizards",
+      "location": "Washington",
+      "lastGames": []
+    }
+  ],
+  "users": [
+    {
+      "email": "abderrahmane@habaieb.fr",
+      "password": "mypassword",
+      "username": "Abdou"
+    }
+  ]
+}
