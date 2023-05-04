@@ -16,6 +16,9 @@ export default function PlayersList({ players }) {
   function handleChange(e, page) {
     router.push(`/players/${page}`);
   }
+  function handleClick(id) {
+    router.push(`/player/${id}`);
+  }
 
   return (
     <Box>
@@ -27,7 +30,15 @@ export default function PlayersList({ players }) {
       <List>
         {players.data.map((player) => (
           <Fragment key={player.id}>
-            <ListItem>
+            <ListItem
+              onClick={() => handleClick(player.id)}
+              sx={{
+                cursor: "pointer",
+                "&:hover": {
+                  backgroundColor: "#eee",
+                },
+              }}
+            >
               <ListItemText
                 primary={player.first_name + " " + player.last_name}
                 secondary={player.team.full_name}

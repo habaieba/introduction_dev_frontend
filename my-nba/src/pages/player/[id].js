@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
-import PlayersList from "@/components/players/PlayersList";
+import PlayerDetails from "@/components/players/PlayerDetails";
 
-export default function Home() {
+function Players({ player }) {
   return (
     <>
       <Head>
@@ -15,8 +15,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <PlayersList />
+        <PlayerDetails player={player} />
       </Layout>
     </>
   );
 }
+
+export async function getStaticProps({ params }) {
+  const res = await fetch(
+    `https://www.balldontlie.io/api/v1/players/${params.id}`
+  );
+  const player = await res.json();
+  return {
+    props: {
+      player,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const res = await fetch("https://www.balldontlie.io/api/v1/players");
+  const players = await res.json();
+
+  return {
+    fallback: true,
+    paths: players.data.map((player) => ({
+      params: { id: `${player.id}` },
+    })),
+  };
+}
+
+export default Players;
