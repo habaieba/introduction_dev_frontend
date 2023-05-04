@@ -30,7 +30,7 @@ export default function LoginForm() {
       })
       .then((user) => {
         dispatch({ type: "login", user });
-        router.push("/account");
+        router.push("/");
       })
       .catch((error) => {
         setErrorMessage(error.message);

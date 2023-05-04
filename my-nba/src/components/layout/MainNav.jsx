@@ -8,7 +8,7 @@ export const APP_BAR_HEIGHT = 80;
 export default function MainNav() {
   const dispatch = useContext(UserDispatchContext);
   const pages = [
-    { title: "Joueurs NBA", url: "/players" },
+    { title: "Joueurs NBA", url: "/players/1" },
     { title: "Mon compte", url: "/account" },
   ];
 

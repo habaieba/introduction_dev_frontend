@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
-import { Box, Typography } from "@mui/material";
+import PlayersList from "@/components/players/PlayersList";
 
 export default function Home() {
   return (
@@ -15,9 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
-          <Typography variant="h3">Bienvenue !</Typography>
-        </Box>
+        <PlayersList />
       </Layout>
     </>
   );
