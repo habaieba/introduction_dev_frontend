@@ -1,5 +1,5 @@
 import MyButton from "@/components/MyButton";
-import Profile from "@/components/Profile";
+import Profile from "@/components/account/Profile";
 import { Box, Typography } from "@mui/material";
 import { useContext } from "react";
 import { UserContext } from "@/context/userContext";

@@ -2,7 +2,7 @@ import { UserContext, UserDispatchContext } from "@/context/userContext";
 import { Box, Button } from "@mui/material";
 import { useContext } from "react";
 
-export default function MyButton() {
+export default function LoginButton() {
   const user = useContext(UserContext);
   const dispatch = useContext(UserDispatchContext);
 
