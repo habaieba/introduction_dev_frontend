@@ -1,14 +1,19 @@
-import { Typography } from "@mui/material";
+import { UserContext } from "@/context/userContext";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import { useContext } from "react";
 
-export default function Profile({ player, isConnected }) {
+export default function Profile() {
+  const user = useContext(UserContext);
   return (
-    <div>
-      {isConnected && (
+    <Box>
+      {user.isConnected && (
         <>
-          <Typography>Nom du joueur : {player.name}</Typography>
+          <Box marginBottom={2}>
+            <Typography>Utilisateur : {user.username}</Typography>
+          </Box>
           <Image
-            src={player.avatarUrl}
+            src={user.avatarUrl}
             alt={"Avatar Player"}
             width={200}
             height={200}
@@ -16,6 +21,6 @@ export default function Profile({ player, isConnected }) {
           />
         </>
       )}
-    </div>
+    </Box>
   );
 }

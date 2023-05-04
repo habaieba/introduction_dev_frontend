@@ -1,17 +1,12 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { useContext } from "react";
-import { Box, Container } from "@mui/material";
+import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import { UserContext } from "@/context/userContext";
-import LoginForm from "@/components/login/LoginForm";
-
-const inter = Inter({ subsets: ["latin"] });
+import Layout from "@/components/layout/Layout";
+import { Box, Typography } from "@mui/material";
 
 export default function Home() {
-  const user = useContext(UserContext);
-  const router = useRouter();
-
   return (
     <>
       <Head>
@@ -23,12 +18,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container
-        className={inter.className}
-        sx={{ display: "flex", height: "100vh" }}
-      >
-        <LoginForm />
-      </Container>
+      <Layout>
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+          <Typography variant="h3">Bienvenue !</Typography>
+        </Box>
+      </Layout>
     </>
   );
 }

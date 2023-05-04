@@ -1,8 +1,9 @@
-import MyButton from "@/components/MyButton";
 import Profile from "@/components/account/Profile";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useContext } from "react";
 import { UserContext } from "@/context/userContext";
+import Layout from "@/components/layout/Layout";
+import Head from "next/head";
 
 export default function Account() {
   const player = {
@@ -11,15 +12,22 @@ export default function Account() {
       "https://ca-times.brightspotcdn.com/dims4/default/0f13f1e/2147483647/strip/true/crop/4937x3292+0+0/resize/1200x800!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F4e%2F4e%2Fba20004c41a5bc970aad01b5739b%2Fhttps-delivery.gettyimages.com%2Fdownloads%2F1199826353.jpg",
   };
 
-  const user = useContext(UserContext);
-
   return (
-    <Box>
-      <Typography variant="h3">Mon compte</Typography>
-      <Box>
-        <Profile player={player} isConnected={user.isConnected} />
-        <MyButton />
-      </Box>
-    </Box>
+    <>
+      <Head>
+        <title>Mon compte</title>
+        <meta
+          name="description"
+          content="An app to post messages to NBA players"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Layout>
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+          <Profile />
+        </Box>
+      </Layout>
+    </>
   );
 }
