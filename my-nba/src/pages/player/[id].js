@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Layout from "@/components/layout/Layout";
 import PlayerDetails from "@/components/players/PlayerDetails";
+import { Box, Stack } from "@mui/material";
+import Web3Module from "@/components/web3/Web3Module";
 
 function Players({ player }) {
   return (
@@ -15,7 +17,19 @@ function Players({ player }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <PlayerDetails player={player} />
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          direction={"row"}
+        >
+          <Box display={"flex"} flex={1} mr={5}>
+            <PlayerDetails player={player} />
+          </Box>
+          <Box display={"flex"} flex={2}>
+            <Web3Module />
+          </Box>
+        </Box>
       </Layout>
     </>
   );
