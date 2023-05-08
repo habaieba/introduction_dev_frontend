@@ -22,29 +22,37 @@ function Players({ players }) {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(
-    `https://www.balldontlie.io/api/v1/players?page=${params.page}`
-  );
-  const players = await res.json();
-  return {
-    props: {
-      players,
-      currentPage: params.page,
-      totalPages: players.meta.total_pages,
-    },
-  };
+  try {
+    const res = await fetch(
+      `https://www.balldontlie.io/api/v1/players?page=${params.page}`
+    );
+    const players = await res.json();
+    return {
+      props: {
+        players,
+        currentPage: params.page,
+        totalPages: players.meta.total_pages,
+      },
+    };
+  } catch (err) {
+    throw new Error(err.message);
+  }
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("https://www.balldontlie.io/api/v1/players");
-  const players = await res.json();
+  try {
+    const res = await fetch("https://www.balldontlie.io/api/v1/players");
+    const players = await res.json();
 
-  return {
-    fallback: true,
-    paths: Array.from(Array(players.meta.total_pages).keys()).map((page) => ({
-      params: { page: `${page}` },
-    })),
-  };
+    return {
+      fallback: true,
+      paths: Array.from(Array(players.meta.total_pages).keys()).map((page) => ({
+        params: { page: `${page}` },
+      })),
+    };
+  } catch (err) {
+    throw new Error(err.message);
+  }
 }
 
 export default Players;

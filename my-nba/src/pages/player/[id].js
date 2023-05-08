@@ -36,26 +36,34 @@ function Players({ player }) {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(
-    `https://www.balldontlie.io/api/v1/players/${params.id}`
-  );
-  const player = await res.json();
-  return {
-    props: {
-      player,
-    },
-  };
+  try {
+    const res = await fetch(
+      `https://www.balldontlie.io/api/v1/players/${params.id}`
+    );
+    const player = await res.json();
+    return {
+      props: {
+        player,
+      },
+    };
+  } catch (err) {
+    throw new Error(err.message);
+  }
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("https://www.balldontlie.io/api/v1/players");
-  const players = await res.json();
-  return {
-    fallback: true,
-    paths: players.data.map((player) => ({
-      params: { id: `${player.id}` },
-    })),
-  };
+  try {
+    const res = await fetch("https://www.balldontlie.io/api/v1/players");
+    const players = await res.json();
+    return {
+      fallback: true,
+      paths: players.data.map((player) => ({
+        params: { id: `${player.id}` },
+      })),
+    };
+  } catch (err) {
+    throw new Error(err.message);
+  }
 }
 
 export default Players;
