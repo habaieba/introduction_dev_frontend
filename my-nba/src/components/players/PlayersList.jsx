@@ -21,33 +21,35 @@ export default function PlayersList({ players }) {
   }
 
   return (
-    <Box>
-      <Pagination
-        count={players.meta.total_pages}
-        color="primary"
-        onChange={handleChange}
-      />
-      <List>
-        {players.data.map((player) => (
-          <Fragment key={player.id}>
-            <ListItem
-              onClick={() => handleClick(player.id)}
-              sx={{
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "#eee",
-                },
-              }}
-            >
-              <ListItemText
-                primary={player.first_name + " " + player.last_name}
-                secondary={player.team.full_name}
-              ></ListItemText>
-            </ListItem>
-            <Divider />
-          </Fragment>
-        ))}
-      </List>
-    </Box>
+    players && (
+      <Box>
+        <Pagination
+          count={players.meta.total_pages}
+          color="primary"
+          onChange={handleChange}
+        />
+        <List>
+          {players.data.map((player) => (
+            <Fragment key={player.id}>
+              <ListItem
+                onClick={() => handleClick(player.id)}
+                sx={{
+                  cursor: "pointer",
+                  "&:hover": {
+                    backgroundColor: "#eee",
+                  },
+                }}
+              >
+                <ListItemText
+                  primary={player.first_name + " " + player.last_name}
+                  secondary={player.team.full_name}
+                ></ListItemText>
+              </ListItem>
+              <Divider />
+            </Fragment>
+          ))}
+        </List>
+      </Box>
+    )
   );
 }
