@@ -11,7 +11,7 @@ import {
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 
-export default function PlayersList({ players }) {
+export default function PlayersList({ players, totalPages }) {
   const router = useRouter();
   function handleChange(e, page) {
     router.push(`/players/${page}`);
@@ -24,7 +24,7 @@ export default function PlayersList({ players }) {
     players && (
       <Box>
         <Pagination
-          count={players.meta.total_pages}
+          count={totalPages}
           color="primary"
           onChange={handleChange}
         />

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "@/components/layout/Layout";
 import PlayersList from "@/components/players/PlayersList";
 
-function Players({ players }) {
+function Players({ players, totalPages }) {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ function Players({ players }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <PlayersList players={players} />
+        <PlayersList players={players} totalPages={totalPages} />
       </Layout>
     </>
   );
@@ -30,8 +30,7 @@ export async function getStaticProps({ params }) {
     return {
       props: {
         players,
-        currentPage: params.page,
-        totalPages: players.meta.total_pages,
+        totalPages: 30,
       },
     };
   } catch (err) {
@@ -46,7 +45,7 @@ export async function getStaticPaths() {
 
     return {
       fallback: true,
-      paths: Array.from(Array(players.meta.total_pages).keys()).map((page) => ({
+      paths: Array.from(Array(30).keys()).map((page) => ({
         params: { page: `${page}` },
       })),
     };
