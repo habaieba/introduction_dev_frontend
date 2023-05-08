@@ -4,10 +4,10 @@ export default function MyButton({ isConnected, handleClick }) {
   return (
     <div>
       <button
-        className={isConnected ? styles.buttonLogout : styles.buttonLogin}
+        className={isConnected ? styles.buttonLoggedIn : styles.buttonLoggedOut}
         onClick={handleClick}
       >
-        {isConnected ? "Se déconnecter" : "Se connecter"}
+        {isConnected ? "Je suis connecté" : "Je suis déconnecté"}
       </button>
     </div>
   );
