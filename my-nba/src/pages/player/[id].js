@@ -50,7 +50,6 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const res = await fetch("https://www.balldontlie.io/api/v1/players");
   const players = await res.json();
-
   return {
     fallback: true,
     paths: players.data.map((player) => ({
