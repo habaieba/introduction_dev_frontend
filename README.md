@@ -1,7 +1,7 @@
 # Introduction au développement front end web et mobile
 
-## 01 Introduction React/Next
+## My NBA - React/Next.js
 
-## 02 Emojis Filter
+## Emojis Filter - React/Next.js
 
-## 03 - My Wallet
+## SmashStickers - React Native/Expo
