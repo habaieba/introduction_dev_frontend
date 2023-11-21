@@ -27,14 +27,21 @@ export async function getStaticProps({ params }) {
       `https://www.balldontlie.io/api/v1/players?page=${params.page}`
     );
     const players = await res.json();
+    const totalPages = players.meta.total_pages;
+
     return {
       props: {
         players,
-        totalPages: 30,
+        totalPages,
       },
     };
   } catch (err) {
-    throw new Error(err.message);
+    return {
+      props: {
+        players: { data: [] },
+        totalPages: 1,
+      },
+    };
   }
 }
 
@@ -42,15 +49,20 @@ export async function getStaticPaths() {
   try {
     const res = await fetch("https://www.balldontlie.io/api/v1/players");
     const players = await res.json();
+    const totalPages = players.meta.total_pages;
 
     return {
       fallback: true,
-      paths: Array.from(Array(30).keys()).map((page) => ({
+      paths: Array.from(Array(totalPages).keys()).map((page) => ({
         params: { page: `${page}` },
       })),
     };
   } catch (err) {
-    throw new Error(err.message);
+    console.error(err.message);
+    return {
+      fallback: true,
+      paths: [],
+    };
   }
 }
 

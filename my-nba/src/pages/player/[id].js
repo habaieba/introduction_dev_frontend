@@ -47,7 +47,11 @@ export async function getStaticProps({ params }) {
       },
     };
   } catch (err) {
-    throw new Error(err.message);
+    return {
+      props: {
+        player: null,
+      },
+    };
   }
 }
 
@@ -62,7 +66,11 @@ export async function getStaticPaths() {
       })),
     };
   } catch (err) {
-    throw new Error(err.message);
+    console.error(err.message);
+    return {
+      fallback: true,
+      paths: [],
+    };
   }
 }
 
