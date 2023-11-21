@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Divider,
   ListItem,
@@ -8,7 +7,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { utils } from "ethers";
+import { parseEther, stringToHex } from "viem";
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import {
@@ -29,11 +28,9 @@ export default function PostsList() {
   const [debouncedTo] = useDebounce(recipient, 500);
   const [debouncedAmount] = useDebounce(amount, 500);
   const { config } = usePrepareSendTransaction({
-    request: {
-      to: debouncedTo,
-      value: debouncedAmount ? utils.parseEther(debouncedAmount) : undefined,
-      data: utils.formatBytes32String(message),
-    },
+    to: debouncedTo,
+    value: debouncedAmount ? parseEther(debouncedAmount) : undefined,
+    data: stringToHex(message, { size: 32 }),
   });
   const { data, sendTransaction } = useSendTransaction(config);
   const { isLoading } = useWaitForTransaction({

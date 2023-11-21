@@ -1,5 +1,5 @@
 import { Button, Stack, Typography } from "@mui/material";
-import { useWeb3Modal } from "@web3modal/react";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useState } from "react";
 import { useAccount, useBalance, useDisconnect } from "wagmi";
 import MessagesList from "./PostsList";
@@ -40,7 +40,7 @@ export default function Web3Module() {
             <Typography>Status : {status}</Typography>
             <Typography>Compte : {address}</Typography>
             <Typography>
-              Balance : {balance.formatted} {balance.symbol}
+              Balance : {balance?.formatted} {balance?.symbol}
             </Typography>
           </>
         )}
